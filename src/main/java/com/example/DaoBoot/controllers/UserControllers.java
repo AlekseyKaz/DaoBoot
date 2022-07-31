@@ -23,12 +23,7 @@ public class UserControllers {
     @GetMapping() //получаем всех людей из ДАО и выводит на отображение
     public String getAll(Model model) {
         List<User> users = userService.getAll();
-        if (users.isEmpty()) {
-            userService.add(new User("bla", 10, "@1"));
-            userService.add(new User("blabla", 11, "@2"));
-            userService.add(new User("bpa", 12, "@3"));
-            userService.add(new User("dfbd", 13,  "@4"));
-        }
+
         model.addAttribute("user", users);
     return "user/getAll";
     }
