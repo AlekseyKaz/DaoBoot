@@ -1,7 +1,7 @@
 package com.example.DaoBoot.service;
 
 
-import com.example.DaoBoot.DAO.UserDao;
+import com.example.DaoBoot.dao.UserDao;
 import com.example.DaoBoot.models.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,4 +1,4 @@
-package com.example.DaoBoot.DAO;
+package com.example.DaoBoot.dao;
 
 
 import com.example.DaoBoot.models.User;
