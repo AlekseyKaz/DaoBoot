@@ -3,15 +3,13 @@ package com.example.DaoBoot.dao;
 
 import com.example.DaoBoot.models.User;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-@Transactional
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -33,16 +31,16 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public void delete(Long id) {
-    entityManager.remove(entityManager.find(User.class,id));
+        entityManager.remove(entityManager.find(User.class, id));
 
     }
 
     @Override
     public void update(Long id, User UpdateUser) {
-    User userToBeUpdate = entityManager.find(User.class,id);
-    userToBeUpdate.setName(UpdateUser.getName());
-    userToBeUpdate.setAge(UpdateUser.getAge());
-    userToBeUpdate.setEmail(UpdateUser.getEmail());
+        User userToBeUpdate = entityManager.find(User.class, id);
+        userToBeUpdate.setName(UpdateUser.getName());
+        userToBeUpdate.setAge(UpdateUser.getAge());
+        userToBeUpdate.setEmail(UpdateUser.getEmail());
 
     }
 
